@@ -1,7 +1,7 @@
 // set win, loss, userGuess to 0; guesses to 9
 var win = 0;
 var loss = 0;
-var guesses = 9;
+var guesses = 10;
 var guessArray = [];
 var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 var compGuess = compGuess;
@@ -27,10 +27,31 @@ document.onkeypress = function(event) {
     if (!limit.test(userGuess)) {
         alert ('Letters only, please!');
     }
-        else {
-            console.log(userGuess);
-        }
-
-
+    else {
+        console.log(userGuess);
+    }
+    
+    
+    
+    
+    
+    // check for matching value between userGuess and compGuess
+    if (compGuess === userGuess) {
+        console.log('Win');
+        alert('You must be reading my mail...')
+        document.getElementById("win").innerHTML = win+=1;
+        userGuess = [];
+        document.getElementById("userGuess").innerHTML = userGuess;
+        funGuess();
+        console.log(compGuess);
+        guesses = 10;
+        document.getElementById("guesses").innerHTML = guesses;
+    }
+    else {
+        console.log("Oh, come on!")
+        document.getElementById("guesses").innerHTML = guesses-=1;
+        guessArray.push(userGuess);
+        document.getElementById("guessArray").innerHTML = guessArray;
+    }
    
 }
