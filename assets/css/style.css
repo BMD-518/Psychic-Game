@@ -1,0 +1,35 @@
+.wrapper {
+margin-left: 2.5%;
+margin-top: 2.5%;
+}
+
+h1 {
+    font-size: 250%;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 125%;
+}
+
+p {
+}
+
+#win {
+    color: blue;
+    font-size: 150%;
+}
+
+#loss {
+    color: red;
+    font-size: 150%;
+}
+
+#guesses {
+    color: green;
+    font-size: 150%
+}
+
+#guessArray {
+    font-size: 150%;
+}
