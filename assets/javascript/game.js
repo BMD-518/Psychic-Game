@@ -54,10 +54,10 @@ document.onkeypress = function(event) {
         document.getElementById("loss").innerHTML = loss+=1;
         console.log("Loss")
         alert("Ya blew it!")
-// *** guesses not returning to 10 after loss.
         guesses = 10;
-// *** guessArray not resetting after loss.
+        document.getElementById("guesses").innerHTML = guesses;
         guessArray = [];
+        document.getElementById("guessArray").innerHTML = guessArray;
         funGuess();
     }
 }
